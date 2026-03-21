@@ -1,0 +1,412 @@
+$ java OptimiseurCapacite 6
+==== Capacité du stationnement fixée à : 1 ====
+Simulation 1 (293 ms) ; Longueur de la file d'attente à la fin de la simulation : 159
+Simulation 2 (11 ms) ; Longueur de la file d'attente à la fin de la simulation : 136
+Simulation 3 (31 ms) ; Longueur de la file d'attente à la fin de la simulation : 137
+Simulation 4 (68 ms) ; Longueur de la file d'attente à la fin de la simulation : 142
+Simulation 5 (22 ms) ; Longueur de la file d'attente à la fin de la simulation : 125
+Simulation 6 (58 ms) ; Longueur de la file d'attente à la fin de la simulation : 128
+Simulation 7 (13 ms) ; Longueur de la file d'attente à la fin de la simulation : 140
+Simulation 8 (14 ms) ; Longueur de la file d'attente à la fin de la simulation : 146
+Simulation 9 (32 ms) ; Longueur de la file d'attente à la fin de la simulation : 138
+Simulation 10 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 162
+
+==== Capacité du stationnement fixée à : 2 ====
+Simulation 1 (109 ms) ; Longueur de la file d'attente à la fin de la simulation : 113
+Simulation 2 (38 ms) ; Longueur de la file d'attente à la fin de la simulation : 146
+Simulation 3 (27 ms) ; Longueur de la file d'attente à la fin de la simulation : 135
+Simulation 4 (12 ms) ; Longueur de la file d'attente à la fin de la simulation : 141
+Simulation 5 (12 ms) ; Longueur de la file d'attente à la fin de la simulation : 119
+Simulation 6 (16 ms) ; Longueur de la file d'attente à la fin de la simulation : 147
+Simulation 7 (12 ms) ; Longueur de la file d'attente à la fin de la simulation : 136
+Simulation 8 (11 ms) ; Longueur de la file d'attente à la fin de la simulation : 134
+Simulation 9 (13 ms) ; Longueur de la file d'attente à la fin de la simulation : 129
+Simulation 10 (12 ms) ; Longueur de la file d'attente à la fin de la simulation : 135
+
+==== Capacité du stationnement fixée à : 3 ====
+Simulation 1 (22 ms) ; Longueur de la file d'attente à la fin de la simulation : 148
+Simulation 2 (43 ms) ; Longueur de la file d'attente à la fin de la simulation : 127
+Simulation 3 (15 ms) ; Longueur de la file d'attente à la fin de la simulation : 133
+Simulation 4 (20 ms) ; Longueur de la file d'attente à la fin de la simulation : 122
+Simulation 5 (19 ms) ; Longueur de la file d'attente à la fin de la simulation : 131
+Simulation 6 (24 ms) ; Longueur de la file d'attente à la fin de la simulation : 112
+Simulation 7 (183 ms) ; Longueur de la file d'attente à la fin de la simulation : 135
+Simulation 8 (185 ms) ; Longueur de la file d'attente à la fin de la simulation : 129
+Simulation 9 (25 ms) ; Longueur de la file d'attente à la fin de la simulation : 123
+Simulation 10 (35 ms) ; Longueur de la file d'attente à la fin de la simulation : 130
+
+==== Capacité du stationnement fixée à : 4 ====
+Simulation 1 (31 ms) ; Longueur de la file d'attente à la fin de la simulation : 125
+Simulation 2 (27 ms) ; Longueur de la file d'attente à la fin de la simulation : 140
+Simulation 3 (23 ms) ; Longueur de la file d'attente à la fin de la simulation : 135
+Simulation 4 (27 ms) ; Longueur de la file d'attente à la fin de la simulation : 138
+Simulation 5 (35 ms) ; Longueur de la file d'attente à la fin de la simulation : 109
+Simulation 6 (37 ms) ; Longueur de la file d'attente à la fin de la simulation : 109
+Simulation 7 (36 ms) ; Longueur de la file d'attente à la fin de la simulation : 113
+Simulation 8 (25 ms) ; Longueur de la file d'attente à la fin de la simulation : 113
+Simulation 9 (29 ms) ; Longueur de la file d'attente à la fin de la simulation : 115
+Simulation 10 (154 ms) ; Longueur de la file d'attente à la fin de la simulation : 133
+
+==== Capacité du stationnement fixée à : 5 ====
+Simulation 1 (72 ms) ; Longueur de la file d'attente à la fin de la simulation : 118
+Simulation 2 (28 ms) ; Longueur de la file d'attente à la fin de la simulation : 119
+Simulation 3 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 131
+Simulation 4 (39 ms) ; Longueur de la file d'attente à la fin de la simulation : 126
+Simulation 5 (28 ms) ; Longueur de la file d'attente à la fin de la simulation : 116
+Simulation 6 (28 ms) ; Longueur de la file d'attente à la fin de la simulation : 130
+Simulation 7 (29 ms) ; Longueur de la file d'attente à la fin de la simulation : 121
+Simulation 8 (27 ms) ; Longueur de la file d'attente à la fin de la simulation : 109
+Simulation 9 (26 ms) ; Longueur de la file d'attente à la fin de la simulation : 130
+Simulation 10 (24 ms) ; Longueur de la file d'attente à la fin de la simulation : 112
+
+==== Capacité du stationnement fixée à : 6 ====
+Simulation 1 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 120
+Simulation 2 (31 ms) ; Longueur de la file d'attente à la fin de la simulation : 98
+Simulation 3 (30 ms) ; Longueur de la file d'attente à la fin de la simulation : 129
+Simulation 4 (29 ms) ; Longueur de la file d'attente à la fin de la simulation : 110
+Simulation 5 (31 ms) ; Longueur de la file d'attente à la fin de la simulation : 132
+Simulation 6 (31 ms) ; Longueur de la file d'attente à la fin de la simulation : 110
+Simulation 7 (32 ms) ; Longueur de la file d'attente à la fin de la simulation : 104
+Simulation 8 (30 ms) ; Longueur de la file d'attente à la fin de la simulation : 108
+Simulation 9 (30 ms) ; Longueur de la file d'attente à la fin de la simulation : 126
+Simulation 10 (30 ms) ; Longueur de la file d'attente à la fin de la simulation : 116
+
+==== Capacité du stationnement fixée à : 7 ====
+Simulation 1 (35 ms) ; Longueur de la file d'attente à la fin de la simulation : 109
+Simulation 2 (36 ms) ; Longueur de la file d'attente à la fin de la simulation : 105
+Simulation 3 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 107
+Simulation 4 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 123
+Simulation 5 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 98
+Simulation 6 (33 ms) ; Longueur de la file d'attente à la fin de la simulation : 100
+Simulation 7 (33 ms) ; Longueur de la file d'attente à la fin de la simulation : 96
+Simulation 8 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 106
+Simulation 9 (35 ms) ; Longueur de la file d'attente à la fin de la simulation : 101
+Simulation 10 (34 ms) ; Longueur de la file d'attente à la fin de la simulation : 108
+
+==== Capacité du stationnement fixée à : 8 ====
+Simulation 1 (38 ms) ; Longueur de la file d'attente à la fin de la simulation : 89
+Simulation 2 (40 ms) ; Longueur de la file d'attente à la fin de la simulation : 112
+Simulation 3 (44 ms) ; Longueur de la file d'attente à la fin de la simulation : 123
+Simulation 4 (45 ms) ; Longueur de la file d'attente à la fin de la simulation : 99
+Simulation 5 (44 ms) ; Longueur de la file d'attente à la fin de la simulation : 104
+Simulation 6 (43 ms) ; Longueur de la file d'attente à la fin de la simulation : 77
+Simulation 7 (43 ms) ; Longueur de la file d'attente à la fin de la simulation : 107
+Simulation 8 (42 ms) ; Longueur de la file d'attente à la fin de la simulation : 105
+Simulation 9 (42 ms) ; Longueur de la file d'attente à la fin de la simulation : 81
+Simulation 10 (48 ms) ; Longueur de la file d'attente à la fin de la simulation : 110
+
+==== Capacité du stationnement fixée à : 9 ====
+Simulation 1 (52 ms) ; Longueur de la file d'attente à la fin de la simulation : 87
+Simulation 2 (50 ms) ; Longueur de la file d'attente à la fin de la simulation : 102
+Simulation 3 (48 ms) ; Longueur de la file d'attente à la fin de la simulation : 113
+Simulation 4 (48 ms) ; Longueur de la file d'attente à la fin de la simulation : 93
+Simulation 5 (48 ms) ; Longueur de la file d'attente à la fin de la simulation : 66
+Simulation 6 (48 ms) ; Longueur de la file d'attente à la fin de la simulation : 115
+Simulation 7 (46 ms) ; Longueur de la file d'attente à la fin de la simulation : 95
+Simulation 8 (46 ms) ; Longueur de la file d'attente à la fin de la simulation : 89
+Simulation 9 (44 ms) ; Longueur de la file d'attente à la fin de la simulation : 96
+Simulation 10 (46 ms) ; Longueur de la file d'attente à la fin de la simulation : 119
+
+==== Capacité du stationnement fixée à : 10 ====
+Simulation 1 (50 ms) ; Longueur de la file d'attente à la fin de la simulation : 93
+Simulation 2 (50 ms) ; Longueur de la file d'attente à la fin de la simulation : 93
+Simulation 3 (50 ms) ; Longueur de la file d'attente à la fin de la simulation : 106
+Simulation 4 (50 ms) ; Longueur de la file d'attente à la fin de la simulation : 100
+Simulation 5 (49 ms) ; Longueur de la file d'attente à la fin de la simulation : 64
+Simulation 6 (54 ms) ; Longueur de la file d'attente à la fin de la simulation : 106
+Simulation 7 (52 ms) ; Longueur de la file d'attente à la fin de la simulation : 73
+Simulation 8 (51 ms) ; Longueur de la file d'attente à la fin de la simulation : 96
+Simulation 9 (50 ms) ; Longueur de la file d'attente à la fin de la simulation : 92
+Simulation 10 (50 ms) ; Longueur de la file d'attente à la fin de la simulation : 98
+
+==== Capacité du stationnement fixée à : 11 ====
+Simulation 1 (56 ms) ; Longueur de la file d'attente à la fin de la simulation : 82
+Simulation 2 (57 ms) ; Longueur de la file d'attente à la fin de la simulation : 84
+Simulation 3 (56 ms) ; Longueur de la file d'attente à la fin de la simulation : 87
+Simulation 4 (55 ms) ; Longueur de la file d'attente à la fin de la simulation : 102
+Simulation 5 (54 ms) ; Longueur de la file d'attente à la fin de la simulation : 61
+Simulation 6 (59 ms) ; Longueur de la file d'attente à la fin de la simulation : 73
+Simulation 7 (56 ms) ; Longueur de la file d'attente à la fin de la simulation : 63
+Simulation 8 (61 ms) ; Longueur de la file d'attente à la fin de la simulation : 90
+Simulation 9 (78 ms) ; Longueur de la file d'attente à la fin de la simulation : 95
+Simulation 10 (78 ms) ; Longueur de la file d'attente à la fin de la simulation : 88
+
+==== Capacité du stationnement fixée à : 12 ====
+Simulation 1 (76 ms) ; Longueur de la file d'attente à la fin de la simulation : 88
+Simulation 2 (82 ms) ; Longueur de la file d'attente à la fin de la simulation : 68
+Simulation 3 (104 ms) ; Longueur de la file d'attente à la fin de la simulation : 113
+Simulation 4 (109 ms) ; Longueur de la file d'attente à la fin de la simulation : 103
+Simulation 5 (148 ms) ; Longueur de la file d'attente à la fin de la simulation : 87
+Simulation 6 (127 ms) ; Longueur de la file d'attente à la fin de la simulation : 79
+Simulation 7 (109 ms) ; Longueur de la file d'attente à la fin de la simulation : 97
+Simulation 8 (124 ms) ; Longueur de la file d'attente à la fin de la simulation : 99
+Simulation 9 (163 ms) ; Longueur de la file d'attente à la fin de la simulation : 73
+Simulation 10 (152 ms) ; Longueur de la file d'attente à la fin de la simulation : 71
+
+==== Capacité du stationnement fixée à : 13 ====
+Simulation 1 (214 ms) ; Longueur de la file d'attente à la fin de la simulation : 83
+Simulation 2 (244 ms) ; Longueur de la file d'attente à la fin de la simulation : 83
+Simulation 3 (184 ms) ; Longueur de la file d'attente à la fin de la simulation : 68
+Simulation 4 (160 ms) ; Longueur de la file d'attente à la fin de la simulation : 69
+Simulation 5 (145 ms) ; Longueur de la file d'attente à la fin de la simulation : 89
+Simulation 6 (149 ms) ; Longueur de la file d'attente à la fin de la simulation : 57
+Simulation 7 (136 ms) ; Longueur de la file d'attente à la fin de la simulation : 78
+Simulation 8 (166 ms) ; Longueur de la file d'attente à la fin de la simulation : 88
+Simulation 9 (127 ms) ; Longueur de la file d'attente à la fin de la simulation : 87
+Simulation 10 (88 ms) ; Longueur de la file d'attente à la fin de la simulation : 92
+
+==== Capacité du stationnement fixée à : 14 ====
+Simulation 1 (85 ms) ; Longueur de la file d'attente à la fin de la simulation : 61
+Simulation 2 (83 ms) ; Longueur de la file d'attente à la fin de la simulation : 75
+Simulation 3 (110 ms) ; Longueur de la file d'attente à la fin de la simulation : 67
+Simulation 4 (84 ms) ; Longueur de la file d'attente à la fin de la simulation : 81
+Simulation 5 (88 ms) ; Longueur de la file d'attente à la fin de la simulation : 78
+Simulation 6 (74 ms) ; Longueur de la file d'attente à la fin de la simulation : 95
+Simulation 7 (74 ms) ; Longueur de la file d'attente à la fin de la simulation : 85
+Simulation 8 (89 ms) ; Longueur de la file d'attente à la fin de la simulation : 74
+Simulation 9 (87 ms) ; Longueur de la file d'attente à la fin de la simulation : 74
+Simulation 10 (85 ms) ; Longueur de la file d'attente à la fin de la simulation : 70
+
+==== Capacité du stationnement fixée à : 15 ====
+Simulation 1 (92 ms) ; Longueur de la file d'attente à la fin de la simulation : 70
+Simulation 2 (86 ms) ; Longueur de la file d'attente à la fin de la simulation : 78
+Simulation 3 (79 ms) ; Longueur de la file d'attente à la fin de la simulation : 55
+Simulation 4 (79 ms) ; Longueur de la file d'attente à la fin de la simulation : 72
+Simulation 5 (84 ms) ; Longueur de la file d'attente à la fin de la simulation : 74
+Simulation 6 (84 ms) ; Longueur de la file d'attente à la fin de la simulation : 77
+Simulation 7 (87 ms) ; Longueur de la file d'attente à la fin de la simulation : 83
+Simulation 8 (125 ms) ; Longueur de la file d'attente à la fin de la simulation : 69
+Simulation 9 (143 ms) ; Longueur de la file d'attente à la fin de la simulation : 72
+Simulation 10 (165 ms) ; Longueur de la file d'attente à la fin de la simulation : 89
+
+==== Capacité du stationnement fixée à : 16 ====
+Simulation 1 (158 ms) ; Longueur de la file d'attente à la fin de la simulation : 69
+Simulation 2 (161 ms) ; Longueur de la file d'attente à la fin de la simulation : 50
+Simulation 3 (188 ms) ; Longueur de la file d'attente à la fin de la simulation : 73
+Simulation 4 (142 ms) ; Longueur de la file d'attente à la fin de la simulation : 55
+Simulation 5 (128 ms) ; Longueur de la file d'attente à la fin de la simulation : 74
+Simulation 6 (258 ms) ; Longueur de la file d'attente à la fin de la simulation : 54
+Simulation 7 (222 ms) ; Longueur de la file d'attente à la fin de la simulation : 80
+Simulation 8 (190 ms) ; Longueur de la file d'attente à la fin de la simulation : 48
+Simulation 9 (733 ms) ; Longueur de la file d'attente à la fin de la simulation : 53
+Simulation 10 (219 ms) ; Longueur de la file d'attente à la fin de la simulation : 59
+
+==== Capacité du stationnement fixée à : 17 ====
+Simulation 1 (178 ms) ; Longueur de la file d'attente à la fin de la simulation : 50
+Simulation 2 (289 ms) ; Longueur de la file d'attente à la fin de la simulation : 58
+Simulation 3 (308 ms) ; Longueur de la file d'attente à la fin de la simulation : 89
+Simulation 4 (378 ms) ; Longueur de la file d'attente à la fin de la simulation : 63
+Simulation 5 (319 ms) ; Longueur de la file d'attente à la fin de la simulation : 46
+Simulation 6 (223 ms) ; Longueur de la file d'attente à la fin de la simulation : 57
+Simulation 7 (789 ms) ; Longueur de la file d'attente à la fin de la simulation : 53
+Simulation 8 (549 ms) ; Longueur de la file d'attente à la fin de la simulation : 58
+Simulation 9 (457 ms) ; Longueur de la file d'attente à la fin de la simulation : 66
+Simulation 10 (519 ms) ; Longueur de la file d'attente à la fin de la simulation : 56
+
+==== Capacité du stationnement fixée à : 18 ====
+Simulation 1 (912 ms) ; Longueur de la file d'attente à la fin de la simulation : 43
+Simulation 2 (810 ms) ; Longueur de la file d'attente à la fin de la simulation : 64
+Simulation 3 (395 ms) ; Longueur de la file d'attente à la fin de la simulation : 53
+Simulation 4 (267 ms) ; Longueur de la file d'attente à la fin de la simulation : 53
+Simulation 5 (234 ms) ; Longueur de la file d'attente à la fin de la simulation : 71
+Simulation 6 (189 ms) ; Longueur de la file d'attente à la fin de la simulation : 48
+Simulation 7 (147 ms) ; Longueur de la file d'attente à la fin de la simulation : 70
+Simulation 8 (158 ms) ; Longueur de la file d'attente à la fin de la simulation : 71
+Simulation 9 (145 ms) ; Longueur de la file d'attente à la fin de la simulation : 63
+Simulation 10 (158 ms) ; Longueur de la file d'attente à la fin de la simulation : 49
+
+==== Capacité du stationnement fixée à : 19 ====
+Simulation 1 (162 ms) ; Longueur de la file d'attente à la fin de la simulation : 39
+Simulation 2 (152 ms) ; Longueur de la file d'attente à la fin de la simulation : 43
+Simulation 3 (178 ms) ; Longueur de la file d'attente à la fin de la simulation : 50
+Simulation 4 (192 ms) ; Longueur de la file d'attente à la fin de la simulation : 85
+Simulation 5 (231 ms) ; Longueur de la file d'attente à la fin de la simulation : 29
+Simulation 6 (179 ms) ; Longueur de la file d'attente à la fin de la simulation : 64
+Simulation 7 (148 ms) ; Longueur de la file d'attente à la fin de la simulation : 63
+Simulation 8 (158 ms) ; Longueur de la file d'attente à la fin de la simulation : 52
+Simulation 9 (168 ms) ; Longueur de la file d'attente à la fin de la simulation : 59
+Simulation 10 (150 ms) ; Longueur de la file d'attente à la fin de la simulation : 47
+
+==== Capacité du stationnement fixée à : 20 ====
+Simulation 1 (183 ms) ; Longueur de la file d'attente à la fin de la simulation : 39
+Simulation 2 (200 ms) ; Longueur de la file d'attente à la fin de la simulation : 49
+Simulation 3 (195 ms) ; Longueur de la file d'attente à la fin de la simulation : 49
+Simulation 4 (176 ms) ; Longueur de la file d'attente à la fin de la simulation : 32
+Simulation 5 (189 ms) ; Longueur de la file d'attente à la fin de la simulation : 40
+Simulation 6 (238 ms) ; Longueur de la file d'attente à la fin de la simulation : 68
+Simulation 7 (486 ms) ; Longueur de la file d'attente à la fin de la simulation : 22
+Simulation 8 (408 ms) ; Longueur de la file d'attente à la fin de la simulation : 69
+Simulation 9 (334 ms) ; Longueur de la file d'attente à la fin de la simulation : 61
+Simulation 10 (475 ms) ; Longueur de la file d'attente à la fin de la simulation : 50
+
+==== Capacité du stationnement fixée à : 21 ====
+Simulation 1 (335 ms) ; Longueur de la file d'attente à la fin de la simulation : 47
+Simulation 2 (580 ms) ; Longueur de la file d'attente à la fin de la simulation : 39
+Simulation 3 (196 ms) ; Longueur de la file d'attente à la fin de la simulation : 71
+Simulation 4 (204 ms) ; Longueur de la file d'attente à la fin de la simulation : 55
+Simulation 5 (241 ms) ; Longueur de la file d'attente à la fin de la simulation : 59
+Simulation 6 (259 ms) ; Longueur de la file d'attente à la fin de la simulation : 57
+Simulation 7 (254 ms) ; Longueur de la file d'attente à la fin de la simulation : 37
+Simulation 8 (224 ms) ; Longueur de la file d'attente à la fin de la simulation : 36
+Simulation 9 (219 ms) ; Longueur de la file d'attente à la fin de la simulation : 33
+Simulation 10 (277 ms) ; Longueur de la file d'attente à la fin de la simulation : 45
+
+==== Capacité du stationnement fixée à : 22 ====
+Simulation 1 (134 ms) ; Longueur de la file d'attente à la fin de la simulation : 60
+Simulation 2 (123 ms) ; Longueur de la file d'attente à la fin de la simulation : 41
+Simulation 3 (125 ms) ; Longueur de la file d'attente à la fin de la simulation : 57
+Simulation 4 (130 ms) ; Longueur de la file d'attente à la fin de la simulation : 37
+Simulation 5 (121 ms) ; Longueur de la file d'attente à la fin de la simulation : 32
+Simulation 6 (165 ms) ; Longueur de la file d'attente à la fin de la simulation : 39
+Simulation 7 (150 ms) ; Longueur de la file d'attente à la fin de la simulation : 44
+Simulation 8 (140 ms) ; Longueur de la file d'attente à la fin de la simulation : 33
+Simulation 9 (163 ms) ; Longueur de la file d'attente à la fin de la simulation : 38
+Simulation 10 (132 ms) ; Longueur de la file d'attente à la fin de la simulation : 29
+
+==== Capacité du stationnement fixée à : 23 ====
+Simulation 1 (134 ms) ; Longueur de la file d'attente à la fin de la simulation : 9
+Simulation 2 (137 ms) ; Longueur de la file d'attente à la fin de la simulation : 36
+Simulation 3 (139 ms) ; Longueur de la file d'attente à la fin de la simulation : 23
+Simulation 4 (131 ms) ; Longueur de la file d'attente à la fin de la simulation : 10
+Simulation 5 (138 ms) ; Longueur de la file d'attente à la fin de la simulation : 24
+Simulation 6 (142 ms) ; Longueur de la file d'attente à la fin de la simulation : 23
+Simulation 7 (128 ms) ; Longueur de la file d'attente à la fin de la simulation : 13
+Simulation 8 (129 ms) ; Longueur de la file d'attente à la fin de la simulation : 32
+Simulation 9 (130 ms) ; Longueur de la file d'attente à la fin de la simulation : 25
+Simulation 10 (138 ms) ; Longueur de la file d'attente à la fin de la simulation : 34
+
+==== Capacité du stationnement fixée à : 24 ====
+Simulation 1 (145 ms) ; Longueur de la file d'attente à la fin de la simulation : 31
+Simulation 2 (150 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 3 (142 ms) ; Longueur de la file d'attente à la fin de la simulation : 34
+Simulation 4 (129 ms) ; Longueur de la file d'attente à la fin de la simulation : 36
+Simulation 5 (134 ms) ; Longueur de la file d'attente à la fin de la simulation : 27
+Simulation 6 (135 ms) ; Longueur de la file d'attente à la fin de la simulation : 48
+Simulation 7 (135 ms) ; Longueur de la file d'attente à la fin de la simulation : 13
+Simulation 8 (135 ms) ; Longueur de la file d'attente à la fin de la simulation : 17
+Simulation 9 (160 ms) ; Longueur de la file d'attente à la fin de la simulation : 21
+Simulation 10 (164 ms) ; Longueur de la file d'attente à la fin de la simulation : 28
+
+==== Capacité du stationnement fixée à : 25 ====
+Simulation 1 (140 ms) ; Longueur de la file d'attente à la fin de la simulation : 55
+Simulation 2 (138 ms) ; Longueur de la file d'attente à la fin de la simulation : 28
+Simulation 3 (140 ms) ; Longueur de la file d'attente à la fin de la simulation : 30
+Simulation 4 (137 ms) ; Longueur de la file d'attente à la fin de la simulation : 20
+Simulation 5 (124 ms) ; Longueur de la file d'attente à la fin de la simulation : 39
+Simulation 6 (136 ms) ; Longueur de la file d'attente à la fin de la simulation : 26
+Simulation 7 (131 ms) ; Longueur de la file d'attente à la fin de la simulation : 19
+Simulation 8 (129 ms) ; Longueur de la file d'attente à la fin de la simulation : 16
+Simulation 9 (130 ms) ; Longueur de la file d'attente à la fin de la simulation : 16
+Simulation 10 (143 ms) ; Longueur de la file d'attente à la fin de la simulation : 17
+
+==== Capacité du stationnement fixée à : 26 ====
+Simulation 1 (154 ms) ; Longueur de la file d'attente à la fin de la simulation : 9
+Simulation 2 (145 ms) ; Longueur de la file d'attente à la fin de la simulation : 16
+Simulation 3 (138 ms) ; Longueur de la file d'attente à la fin de la simulation : 16
+Simulation 4 (141 ms) ; Longueur de la file d'attente à la fin de la simulation : 23
+Simulation 5 (161 ms) ; Longueur de la file d'attente à la fin de la simulation : 36
+Simulation 6 (148 ms) ; Longueur de la file d'attente à la fin de la simulation : 24
+Simulation 7 (141 ms) ; Longueur de la file d'attente à la fin de la simulation : 19
+Simulation 8 (162 ms) ; Longueur de la file d'attente à la fin de la simulation : 21
+Simulation 9 (149 ms) ; Longueur de la file d'attente à la fin de la simulation : 24
+Simulation 10 (152 ms) ; Longueur de la file d'attente à la fin de la simulation : 25
+
+==== Capacité du stationnement fixée à : 27 ====
+Simulation 1 (140 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 2 (164 ms) ; Longueur de la file d'attente à la fin de la simulation : 5
+Simulation 3 (144 ms) ; Longueur de la file d'attente à la fin de la simulation : 11
+Simulation 4 (144 ms) ; Longueur de la file d'attente à la fin de la simulation : 9
+Simulation 5 (142 ms) ; Longueur de la file d'attente à la fin de la simulation : 3
+Simulation 6 (187 ms) ; Longueur de la file d'attente à la fin de la simulation : 24
+Simulation 7 (209 ms) ; Longueur de la file d'attente à la fin de la simulation : 3
+Simulation 8 (199 ms) ; Longueur de la file d'attente à la fin de la simulation : 22
+Simulation 9 (239 ms) ; Longueur de la file d'attente à la fin de la simulation : 17
+Simulation 10 (193 ms) ; Longueur de la file d'attente à la fin de la simulation : 6
+
+==== Capacité du stationnement fixée à : 28 ====
+Simulation 1 (278 ms) ; Longueur de la file d'attente à la fin de la simulation : 15
+Simulation 2 (269 ms) ; Longueur de la file d'attente à la fin de la simulation : 17
+Simulation 3 (261 ms) ; Longueur de la file d'attente à la fin de la simulation : 12
+Simulation 4 (275 ms) ; Longueur de la file d'attente à la fin de la simulation : 8
+Simulation 5 (295 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 6 (197 ms) ; Longueur de la file d'attente à la fin de la simulation : 6
+Simulation 7 (165 ms) ; Longueur de la file d'attente à la fin de la simulation : 8
+Simulation 8 (184 ms) ; Longueur de la file d'attente à la fin de la simulation : 29
+Simulation 9 (163 ms) ; Longueur de la file d'attente à la fin de la simulation : 19
+Simulation 10 (164 ms) ; Longueur de la file d'attente à la fin de la simulation : 11
+
+==== Capacité du stationnement fixée à : 29 ====
+Simulation 1 (159 ms) ; Longueur de la file d'attente à la fin de la simulation : 12
+Simulation 2 (167 ms) ; Longueur de la file d'attente à la fin de la simulation : 14
+Simulation 3 (162 ms) ; Longueur de la file d'attente à la fin de la simulation : 9
+Simulation 4 (171 ms) ; Longueur de la file d'attente à la fin de la simulation : 27
+Simulation 5 (176 ms) ; Longueur de la file d'attente à la fin de la simulation : 18
+Simulation 6 (191 ms) ; Longueur de la file d'attente à la fin de la simulation : 14
+Simulation 7 (170 ms) ; Longueur de la file d'attente à la fin de la simulation : 19
+Simulation 8 (142 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 9 (181 ms) ; Longueur de la file d'attente à la fin de la simulation : 14
+Simulation 10 (177 ms) ; Longueur de la file d'attente à la fin de la simulation : 33
+
+==== Capacité du stationnement fixée à : 30 ====
+Simulation 1 (177 ms) ; Longueur de la file d'attente à la fin de la simulation : 13
+Simulation 2 (170 ms) ; Longueur de la file d'attente à la fin de la simulation : 12
+Simulation 3 (170 ms) ; Longueur de la file d'attente à la fin de la simulation : 23
+Simulation 4 (155 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 5 (163 ms) ; Longueur de la file d'attente à la fin de la simulation : 9
+Simulation 6 (161 ms) ; Longueur de la file d'attente à la fin de la simulation : 6
+Simulation 7 (242 ms) ; Longueur de la file d'attente à la fin de la simulation : 2
+Simulation 8 (177 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 9 (151 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 10 (173 ms) ; Longueur de la file d'attente à la fin de la simulation : 3
+
+==== Capacité du stationnement fixée à : 31 ====
+Simulation 1 (165 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 2 (177 ms) ; Longueur de la file d'attente à la fin de la simulation : 17
+Simulation 3 (184 ms) ; Longueur de la file d'attente à la fin de la simulation : 15
+Simulation 4 (175 ms) ; Longueur de la file d'attente à la fin de la simulation : 14
+Simulation 5 (185 ms) ; Longueur de la file d'attente à la fin de la simulation : 10
+Simulation 6 (158 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 7 (147 ms) ; Longueur de la file d'attente à la fin de la simulation : 2
+Simulation 8 (184 ms) ; Longueur de la file d'attente à la fin de la simulation : 7
+Simulation 9 (240 ms) ; Longueur de la file d'attente à la fin de la simulation : 9
+Simulation 10 (197 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+
+==== Capacité du stationnement fixée à : 32 ====
+Simulation 1 (267 ms) ; Longueur de la file d'attente à la fin de la simulation : 10
+Simulation 2 (207 ms) ; Longueur de la file d'attente à la fin de la simulation : 5
+Simulation 3 (262 ms) ; Longueur de la file d'attente à la fin de la simulation : 4
+Simulation 4 (305 ms) ; Longueur de la file d'attente à la fin de la simulation : 19
+Simulation 5 (401 ms) ; Longueur de la file d'attente à la fin de la simulation : 2
+Simulation 6 (430 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 7 (429 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 8 (441 ms) ; Longueur de la file d'attente à la fin de la simulation : 3
+Simulation 9 (380 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 10 (520 ms) ; Longueur de la file d'attente à la fin de la simulation : 13
+
+==== Capacité du stationnement fixée à : 33 ====
+Simulation 1 (424 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 2 (190 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 3 (229 ms) ; Longueur de la file d'attente à la fin de la simulation : 9
+Simulation 4 (196 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 5 (207 ms) ; Longueur de la file d'attente à la fin de la simulation : 17
+Simulation 6 (172 ms) ; Longueur de la file d'attente à la fin de la simulation : 7
+Simulation 7 (175 ms) ; Longueur de la file d'attente à la fin de la simulation : 16
+Simulation 8 (186 ms) ; Longueur de la file d'attente à la fin de la simulation : 7
+Simulation 9 (154 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 10 (214 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+
+==== Capacité du stationnement fixée à : 34 ====
+Simulation 1 (166 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 2 (195 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 3 (208 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 4 (202 ms) ; Longueur de la file d'attente à la fin de la simulation : 3
+Simulation 5 (141 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 6 (160 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 7 (174 ms) ; Longueur de la file d'attente à la fin de la simulation : 0
+Simulation 8 (205 ms) ; Longueur de la file d'attente à la fin de la simulation : 3
+Simulation 9 (174 ms) ; Longueur de la file d'attente à la fin de la simulation : 8
+Simulation 10 (168 ms) ; Longueur de la file d'attente à la fin de la simulation : 11
+
+LA SIMULATION EST TERMINÉE !
+Nombre minimal de places de stationnement requises : 34
+Temps d’exécution total : 50.956 secondes
