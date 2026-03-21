@@ -75,8 +75,6 @@ public class Stationnement {
 		if (occupation.taille() >= capacite) {
 			return false;
 		}
-
-		stationner(c, timestamp);
 		return true;
 
 	}

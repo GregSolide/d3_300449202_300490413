@@ -74,8 +74,6 @@ public class FileChainee<D> implements File<D> {
 	}
 
 	public D consulter() {
-
--
 		if (estVide()) {
 			throw new IllegalStateException("Méthode consulter appelée sur une file vide");
 		}

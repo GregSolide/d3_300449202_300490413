@@ -1,0 +1,31 @@
+
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+ 
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run Stationnement Test",
+            "request": "launch",
+            "mainClass": "Stationnement",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Run OptimiseurCapacite",
+            "request": "launch",
+            "mainClass": "OptimiseurCapacite",
+            "args": "11"
+        },
+        {
+            "type": "java",
+            "name": "Run Simulateur",
+            "request": "launch",
+            "mainClass": "Simulateur",
+            "args": ""
+        }
+    ]
+}

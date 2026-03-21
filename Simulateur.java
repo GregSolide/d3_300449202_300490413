@@ -128,7 +128,7 @@ public class Simulateur {
 			// Entrée des véhicules de la file entrante
 			while (!fileEntrante.estVide() && stationnement.getOccupation() < stationnement.getCapacite()) {
 				Emplacement candidat = fileEntrante.consulter();
-				if (stationnement.tenterStationnement(candidat.getVoiture(), horloge)) {
+				if (stationnement.tenterStationnement(candidat.getVoiture(), candidat.getInstant())) {
 					fileEntrante.defiler();
 				} else {
 					break;
