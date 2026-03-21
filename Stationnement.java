@@ -40,19 +40,12 @@ public class Stationnement {
 	 * @param timestamp est le temps (simulé) auquel la voiture est stationnée
 	 */
 	public void stationner(Voiture c, int timestamp) {
-
-		if (c == null) {
-			throw new NullPointerException("Voiture non fournie");
-		}
-		if (timestamp < 0) {
-			throw new IllegalArgumentException("Horodatage invalide");
-		}
-		if (occupation.taille() >= capacite) {
-			throw new IllegalStateException("Stationnement plein");
+		if (tenterStationnement(c, timestamp)){
+			Emplacement e = new Emplacement(c, timestamp);
+			occupation.ajouter(e);
 		}
 
-		Emplacement e = new Emplacement(c, timestamp);
-		occupation.ajouter(e);
+		
 	}
 
 	/**
@@ -64,7 +57,7 @@ public class Stationnement {
 	public Emplacement retirer(int i) {
 
 		if (i < 0 || i >= occupation.taille()) {
-			throw new IndexOutOfBoundsException(Integer.toString(i));
+			throw new IndexOutOfBoundsException("Index invalied"+Integer.toString(i));
 		}
 
 		return occupation.retirer(i);
