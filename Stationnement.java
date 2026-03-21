@@ -26,9 +26,7 @@ public class Stationnement {
 	public Stationnement(int capacite) {
 
 		if (capacite < 0) {
-
-			// Indice : lancer ici une exception appropriée.
-
+			throw new IllegalArgumentException("La capacité doit être positive");
 		}
 
 		this.capacite = capacite;
@@ -43,8 +41,18 @@ public class Stationnement {
 	 */
 	public void stationner(Voiture c, int timestamp) {
 
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
+		if (c == null) {
+			throw new NullPointerException("Voiture non fournie");
+		}
+		if (timestamp < 0) {
+			throw new IllegalArgumentException("Horodatage invalide");
+		}
+		if (occupation.taille() >= capacite) {
+			throw new IllegalStateException("Stationnement plein");
+		}
 
+		Emplacement e = new Emplacement(c, timestamp);
+		occupation.ajouter(e);
 	}
 
 	/**
@@ -55,13 +63,28 @@ public class Stationnement {
 	 */
 	public Emplacement retirer(int i) {
 
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
+		if (i < 0 || i >= occupation.taille()) {
+			throw new IndexOutOfBoundsException(Integer.toString(i));
+		}
 
+		return occupation.retirer(i);
 	}
 
 	public boolean tenterStationnement(Voiture c, int timestamp) {
 
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
+		if (c == null) {
+			throw new NullPointerException("Voiture non fournie");
+		}
+		if (timestamp < 0) {
+			throw new IllegalArgumentException("Horodatage invalide");
+		}
+
+		if (occupation.taille() >= capacite) {
+			return false;
+		}
+
+		stationner(c, timestamp);
+		return true;
 
 	}
 
@@ -79,18 +102,17 @@ public class Stationnement {
 	 * @return l’instance Emplacement à la position i
 	 */
 	public Emplacement getEmplacementA(int i) {
-
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
-
+		if (i < 0 || i >= occupation.taille()) {
+			throw new IndexOutOfBoundsException(Integer.toString(i));
+		}
+		return occupation.obtenir(i);
 	}
 
 	/**
 	 * @return le nombre total de voitures stationnées dans le stationnement
 	 */
 	public int getOccupation() {
-
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
-
+		return occupation.taille();
 	}
 
 	/**

@@ -24,14 +24,12 @@ public class DistributionTriangulaire {
 	 * @param b est la limite supérieure de la distribution
 	 */
 	public DistributionTriangulaire(int a, int c, int b) {
-		if (a < c && c < b) {
+		if (a >= 0 && a < c && c < b) {
 			this.a = a;
 			this.c = c;
 			this.b = b;
 		} else {
-
-			// Indice : lancer ici une exception appropriée !
-	
+			throw new IllegalArgumentException("Paramètres de distribution triangulaire non valides");
 		}
 	}
 

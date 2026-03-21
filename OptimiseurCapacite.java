@@ -4,9 +4,34 @@ public class OptimiseurCapacite {
 	private static final double SEUIL = 5.0d;
 
 	public static int getNombreOptimalDePlaces(int tauxHoraire) {
+		if (tauxHoraire < 0) {
+			throw new IllegalArgumentException("Le taux horaire doit être non négatif");
+		}
+
+		int capacite = 1;
+		while (true) {
+			System.out.println("==== Capacité du stationnement fixée à : " + capacite + " ====\n");
+
+			double totalFile = 0.0;
+			for (int i = 1; i <= NOMBRE_EXECUTIONS; i++) {
+				Stationnement stationnement = new Stationnement(capacite);
+				Simulateur simulateur = new Simulateur(stationnement, tauxHoraire, Simulateur.DUREE_SIMULATION);
 	
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
-	
+				long debut = System.currentTimeMillis();
+				simulateur.simuler();
+				long duree = System.currentTimeMillis() - debut;
+				int fileFinale = simulateur.getTailleFileEntrante();
+				totalFile += fileFinale;
+				System.out.println("Simulation " + i + " (" + duree + " ms) ; Longueur de la file d'attente à la fin de la simulation : " + fileFinale);
+			}
+
+			double moyenne = totalFile / NOMBRE_EXECUTIONS;
+			if (moyenne <= SEUIL) {
+				return capacite;
+			}
+
+			capacite++;
+		}
 	}
 
 	public static void main(String args[]) {

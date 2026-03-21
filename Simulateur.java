@@ -73,8 +73,22 @@ public class Simulateur {
 	 * @param etapes             est le nombre total d’étapes de la simulation
 	 */
 	public Simulateur(Stationnement stationnement, int tauxArriveeParHeure, int etapes) {
-	
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
+		if (stationnement == null) {
+			throw new NullPointerException("Stationnement non fourni");
+		}
+		if (tauxArriveeParHeure < 0) {
+			throw new IllegalArgumentException("Le taux horaire d’arrivée ne peut être négatif");
+		}
+		if (etapes <= 0) {
+			throw new IllegalArgumentException("Le nombre d’étapes doit être positif");
+		}
+
+		this.stationnement = stationnement;
+		this.probabiliteArriveeParSeconde = new Rationnel(tauxArriveeParHeure, NOMBRE_SECONDES_DANS_1H);
+		this.horloge = 0;
+		this.etapes = etapes;
+		this.fileEntrante = new FileChainee<Emplacement>();
+		this.fileSortante = new FileChainee<Emplacement>();
 	}
 
 
@@ -83,14 +97,49 @@ public class Simulateur {
 	 * NOTE : Assurez-vous que votre implémentation de simuler() utilise consulter() de l’interface File.
 	 */
 	public void simuler() {
-	
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
-	
+		while (horloge < etapes) {
+
+			// Arrivée potentielle de voiture
+			if (GenerateurAleatoire.evenementSurvenu(probabiliteArriveeParSeconde)) {
+				String plaque = GenerateurAleatoire.genererChaineAleatoire(LONGUEUR_NUMERO_PLAQUE);
+				Voiture voiture = new Voiture(plaque);
+				Emplacement e = new Emplacement(voiture, horloge);
+				fileEntrante.enfiler(e);
+			}
+
+			// Sorties du stationnement
+			for (int i = stationnement.getOccupation() - 1; i >= 0; i--) {
+				Emplacement e = stationnement.getEmplacementA(i);
+				int tempsStationne = horloge - e.getInstant();
+				if (tempsStationne > 0 && tempsStationne <= DUREE_MAX_STATIONNEMENT) {
+					Rationnel pDePart = pdfDepart.pdf(tempsStationne);
+					if (GenerateurAleatoire.evenementSurvenu(pDePart)) {
+						Emplacement depart = stationnement.retirer(i);
+						fileSortante.enfiler(depart);
+					}
+				}
+			}
+
+			// Sortie des véhicules de la file de sortie (en l’état, on les jette)
+			while (!fileSortante.estVide()) {
+				fileSortante.defiler();
+			}
+
+			// Entrée des véhicules de la file entrante
+			while (!fileEntrante.estVide() && stationnement.getOccupation() < stationnement.getCapacite()) {
+				Emplacement candidat = fileEntrante.consulter();
+				if (stationnement.tenterStationnement(candidat.getVoiture(), horloge)) {
+					fileEntrante.defiler();
+				} else {
+					break;
+				}
+			}
+
+			horloge++;
+		}
 	}
 
 	public int getTailleFileEntrante() {
-	
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
-	
+		return fileEntrante.taille();
 	}
 }

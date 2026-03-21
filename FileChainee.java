@@ -23,9 +23,11 @@ public class FileChainee<D> implements File<D> {
 
 	private Element<D> tete;
 	private Element<D> queue;
+	private int taille;
 
 	public FileChainee() {
 		tete = queue = null;
+		taille = 0;
 	}
 
 	public boolean estVide() {
@@ -49,6 +51,7 @@ public class FileChainee<D> implements File<D> {
 			queue.suivant = nouvelElementFile;
 			queue = nouvelElementFile;
 		}
+		taille++;
 	}
 
 	public D defiler() {
@@ -66,15 +69,21 @@ public class FileChainee<D> implements File<D> {
 			tete = tete.suivant;
 		}
 
+		taille--;
 		return valeurRetournee;
 	}
 
 	public D consulter() {
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
+
+-
+		if (estVide()) {
+			throw new IllegalStateException("Méthode consulter appelée sur une file vide");
+		}
+		return tete.valeur;
 	}
 
 	public int taille() {
-		throw new UnsupportedOperationException("Cette méthode n’a pas encore été implémentée !");
+		return taille;
 	}
 
 	public String toString() {
