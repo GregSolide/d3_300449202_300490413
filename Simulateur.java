@@ -1,86 +1,41 @@
 /**
  * @auteur Mehrdad Sabetzadeh, Université d'Ottawa
- *
  */
 public class Simulateur {
 
-	/**
-	 * Longueur des numéros de plaque
-	 */
 	public static final int LONGUEUR_NUMERO_PLAQUE = 3;
-
-	/**
-	 * Nombre de secondes dans une heure
-	 */
 	public static final int NOMBRE_SECONDES_DANS_1H = 3600;
-
-	/**
-	 * Durée maximale pendant laquelle une voiture peut être stationnée dans le stationnement
-	 */
 	public static final int DUREE_MAX_STATIONNEMENT = 8 * NOMBRE_SECONDES_DANS_1H;
-
-	/**
-	 * Durée totale de la simulation en secondes (simulées)
-	 */
 	public static final int DUREE_SIMULATION = 24 * NOMBRE_SECONDES_DANS_1H;
 
-	/**
-	 * La distribution de probabilité pour le départ d’une voiture du stationnement
-	 * en fonction de la durée pendant laquelle la voiture a été stationnée
-	 */
 	public static final DistributionTriangulaire pdfDepart = new DistributionTriangulaire(
 			0,
 			DUREE_MAX_STATIONNEMENT / 2,
 			DUREE_MAX_STATIONNEMENT
 	);
 
-	/**
-	 * La probabilité qu’une voiture arrive à une seconde (simulée) donnée
-	 */
 	private Rationnel probabiliteArriveeParSeconde;
-
-	/**
-	 * L’horloge de simulation. Initialement, l’horloge doit être réglée à zéro;
-	 * ensuite, elle doit être incrémentée d’une unité après chaque seconde (simulée)
-	 */
 	private int horloge;
-
-	/**
-	 * Nombre total d’étapes (secondes simulées) pendant lesquelles la simulation doit s’exécuter.
-	 * Cette valeur est fixée au début de la simulation. La boucle de simulation doit être exécutée
-	 * tant que horloge < etapes. Lorsque horloge == etapes, la simulation est terminée.
-	 */
 	private int etapes;
-
-	/**
-	 * Instance du stationnement simulé.
-	 */
 	private Stationnement stationnement;
-
-	/**
-	 * File pour les voitures voulant entrer dans le stationnement
-	 */
 	private File<Emplacement> fileEntrante;
-
-	/**
-	 * File pour les voitures voulant sortir du stationnement
-	 */
 	private File<Emplacement> fileSortante;
 
 	/**
-	 * @param stationnement      est le stationnement à simuler
-	 * @param tauxArriveeParHeure est le taux horaire auquel les voitures se présentent devant le stationnement
-	 * @param etapes             est le nombre total d’étapes de la simulation
+	 * @param stationnement       est le stationnement à simuler
+	 * @param tauxArriveeParHeure est le taux horaire auquel les voitures arrivent
+	 * @param etapes              est le nombre total d'étapes de la simulation
 	 */
 	public Simulateur(Stationnement stationnement, int tauxArriveeParHeure, int etapes) {
+
 		if (stationnement == null) {
 			throw new NullPointerException("Stationnement non fourni");
 		}
 		if (tauxArriveeParHeure < 0) {
-			throw new IllegalArgumentException("Le taux horaire d’arrivée ne peut être négatif");
+			throw new IllegalArgumentException("Le taux horaire d'arrivée ne peut être négatif");
 		}
 		if (etapes <= 0) {
-			throw new IllegalArgumentException("Le nombre d’étapes doit être positif");
+			throw new IllegalArgumentException("Le nombre d'étapes doit être positif");
 		}
 
 		this.stationnement = stationnement;
@@ -91,47 +46,58 @@ public class Simulateur {
 		this.fileSortante = new FileChainee<Emplacement>();
 	}
 
-
 	/**
-	 * Simule le stationnement pendant le nombre d’étapes spécifié par la variable d’instance etapes
-	 * NOTE : Assurez-vous que votre implémentation de simuler() utilise consulter() de l’interface File.
+	 * Simule le stationnement pendant le nombre d'étapes spécifié.
+	 * Utilise consulter() avant defiler() pour respecter la sémantique de la file.
 	 */
 	public void simuler() {
+
+		horloge = 0;
+
 		while (horloge < etapes) {
 
-			// Arrivée potentielle de voiture
+			// --- 1. Arrivée potentielle d'une nouvelle voiture ---
 			if (GenerateurAleatoire.evenementSurvenu(probabiliteArriveeParSeconde)) {
 				String plaque = GenerateurAleatoire.genererChaineAleatoire(LONGUEUR_NUMERO_PLAQUE);
 				Voiture voiture = new Voiture(plaque);
-				Emplacement e = new Emplacement(voiture, horloge);
-				fileEntrante.enfiler(e);
+				// On enregistre l'heure d'arrivée réelle dans l'emplacement
+				Emplacement arrivee = new Emplacement(voiture, horloge);
+				fileEntrante.enfiler(arrivee);
 			}
 
-			// Sorties du stationnement
+			// --- 2. Départs : vérifier quelles voitures stationnées partent ---
+			// Parcours en sens inverse pour éviter les décalages d'indices après retrait
 			for (int i = stationnement.getOccupation() - 1; i >= 0; i--) {
 				Emplacement e = stationnement.getEmplacementA(i);
 				int tempsStationne = horloge - e.getInstant();
+
 				if (tempsStationne > 0 && tempsStationne <= DUREE_MAX_STATIONNEMENT) {
-					Rationnel pDePart = pdfDepart.pdf(tempsStationne);
-					if (GenerateurAleatoire.evenementSurvenu(pDePart)) {
-						Emplacement depart = stationnement.retirer(i);
-						fileSortante.enfiler(depart);
+					Rationnel probDepart = pdfDepart.pdf(tempsStationne);
+					if (GenerateurAleatoire.evenementSurvenu(probDepart)) {
+						fileSortante.enfiler(stationnement.retirer(i));
 					}
 				}
 			}
 
-			// Sortie des véhicules de la file de sortie (en l’état, on les jette)
+			// Vider la file sortante (les voitures partent définitivement)
 			while (!fileSortante.estVide()) {
 				fileSortante.defiler();
 			}
 
-			// Entrée des véhicules de la file entrante
-			while (!fileEntrante.estVide() && stationnement.getOccupation() < stationnement.getCapacite()) {
+			// --- 3. Entrées : tenter de faire entrer les voitures en attente ---
+			while (!fileEntrante.estVide()) {
+				// consulter() d'abord sans retirer — comme demandé par l'énoncé
 				Emplacement candidat = fileEntrante.consulter();
-				if (stationnement.tenterStationnement(candidat.getVoiture(), candidat.getInstant())) {
-					fileEntrante.defiler();
+
+				// ✅ On conserve l'heure d'arrivée originale (candidat.getInstant())
+				//    et NON pas horloge
+				boolean entre = stationnement.tenterStationnement(
+						candidat.getVoiture(), candidat.getInstant());
+
+				if (entre) {
+					fileEntrante.defiler(); // retirer seulement si le stationnement a réussi
 				} else {
-					break;
+					break; // stationnement plein, on arrête — les autres restent en file
 				}
 			}
 
@@ -139,6 +105,9 @@ public class Simulateur {
 		}
 	}
 
+	/**
+	 * @return la taille de la file entrante à la fin de la simulation
+	 */
 	public int getTailleFileEntrante() {
 		return fileEntrante.taille();
 	}

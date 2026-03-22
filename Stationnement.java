@@ -3,13 +3,8 @@
  */
 public class Stationnement {
 
-	// IMPORTANT : Il est *déconseillé* de définir de nouvelles variables d’instance
-	// dans Stationnement. Vous êtes censé fournir une implémentation de
-	// Stationnement
-	// basée sur une liste. Définir de nouvelles variables d’instance peut vous
-	// éloigner de cet objectif d’implémentation et entraîner une perte de points.
 	/**
-	 * Liste servant à stocker les informations d’occupation du stationnement
+	 * Liste servant à stocker les informations d'occupation du stationnement
 	 */
 	private Liste<Emplacement> occupation;
 
@@ -20,7 +15,7 @@ public class Stationnement {
 
 	/**
 	 * Construit un stationnement avec une capacité (maximale) donnée
-	 * 
+	 *
 	 * @param capacite est la capacité (maximale) du stationnement
 	 */
 	public Stationnement(int capacite) {
@@ -35,48 +30,66 @@ public class Stationnement {
 
 	/**
 	 * Stationne une voiture (c) dans le stationnement.
-	 * 
+	 * Lance une exception si plein, voiture null, ou timestamp négatif.
+	 *
 	 * @param c         est la voiture à stationner
 	 * @param timestamp est le temps (simulé) auquel la voiture est stationnée
 	 */
 	public void stationner(Voiture c, int timestamp) {
-		if (tenterStationnement(c, timestamp)){
-			Emplacement e = new Emplacement(c, timestamp);
-			occupation.ajouter(e);
+
+		if (c == null) {
+			throw new NullPointerException("Voiture non fournie");
+		}
+		if (timestamp < 0) {
+			throw new IllegalArgumentException("Horodatage invalide : " + timestamp);
+		}
+		if (occupation.taille() >= capacite) {
+			throw new IllegalStateException("Le stationnement est plein (capacité = " + capacite + ")");
 		}
 
-		
+		// Ajoute directement — PAS d'appel à tenterStationnement() pour éviter la boucle
+		Emplacement e = new Emplacement(c, timestamp);
+		occupation.ajouter(e);
 	}
 
 	/**
-	 * Retire la voiture (emplacement) stationnée à l’indice i de la liste
-	 * 
-	 * @param i est l’indice de la voiture à retirer
-	 * @return l’emplacement qui a été retiré
+	 * Retire la voiture (emplacement) stationnée à l'indice i de la liste
+	 *
+	 * @param i est l'indice de la voiture à retirer
+	 * @return l'emplacement qui a été retiré
 	 */
 	public Emplacement retirer(int i) {
 
 		if (i < 0 || i >= occupation.taille()) {
-			throw new IndexOutOfBoundsException("Index invalied"+Integer.toString(i));
+			throw new IndexOutOfBoundsException("Index invalide : " + Integer.toString(i));
 		}
 
 		return occupation.retirer(i);
 	}
 
+	/**
+	 * Tente de stationner une voiture. Retourne false si plein (sans exception).
+	 *
+	 * @param c         est la voiture à stationner
+	 * @param timestamp est le temps (simulé) auquel la voiture se présente
+	 * @return true si stationnée avec succès, false si le stationnement est plein
+	 */
 	public boolean tenterStationnement(Voiture c, int timestamp) {
 
 		if (c == null) {
 			throw new NullPointerException("Voiture non fournie");
 		}
 		if (timestamp < 0) {
-			throw new IllegalArgumentException("Horodatage invalide");
+			throw new IllegalArgumentException("Horodatage invalide : " + timestamp);
 		}
 
 		if (occupation.taille() >= capacite) {
 			return false;
 		}
-		return true;
 
+		// Délègue à stationner() pour l'ajout réel
+		stationner(c, timestamp);
+		return true;
 	}
 
 	/**
@@ -87,15 +100,17 @@ public class Stationnement {
 	}
 
 	/**
-	 * Retourne l’instance Emplacement à une position donnée (i)
-	 * 
-	 * @param i est l’indice de l’emplacement
-	 * @return l’instance Emplacement à la position i
+	 * Retourne l'instance Emplacement à une position donnée (i)
+	 *
+	 * @param i est l'indice de l'emplacement
+	 * @return l'instance Emplacement à la position i
 	 */
 	public Emplacement getEmplacementA(int i) {
+
 		if (i < 0 || i >= occupation.taille()) {
 			throw new IndexOutOfBoundsException(Integer.toString(i));
 		}
+
 		return occupation.obtenir(i);
 	}
 
